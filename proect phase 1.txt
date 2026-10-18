@@ -32,3 +32,6 @@ UPDATE ->
 GET: /listings/:id/edit
 
 PUT: /listings/:id
+
+DELETE -> 
+DELETE : /listings/:id

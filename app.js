@@ -73,6 +73,14 @@ app.put('/listings/:id', async (req, res) => {
 });
 
 
+app.delete("/listings/:id", async (req, res)=>{
+    let {id} = req.params;
+    let deletedListing = await listing.findByIdAndDelete(id);
+    console.log(deletedListing);
+    res.redirect("/listings"); 
+})
+
+
 app.listen(3000, () => {
     console.log("on port 3000")
 })
