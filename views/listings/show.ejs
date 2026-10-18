@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3><%= listingData.title %> </h3>
+    <ul>
+        <li>
+           <b>Description: </b> 
+            <%= listingData.description %>
+        </li>
+        <li>
+            <b>Price: &#8377;</b>
+            <%= listingData.price.toLocaleString("en-IN") %>
+        </li>
+        <li>
+            <b> Location: </b>
+            <%= listingData.location %>
+        </li>
+        <li>
+            <b>Country: </b>
+            <%= listingData.country %>
+        </li>
+    </ul>
+
+    <a href="/listings/<%= listingData._id %>/edit">edit this</a>
+</body>
+
+</html>

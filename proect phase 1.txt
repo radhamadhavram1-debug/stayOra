@@ -1,0 +1,34 @@
+BASIC SETUP ->
+
+Database set up 
+REST apis for CRUD 
+
+
+LISTING MODEL -  MSMS E -> mongoose, schema, mongoose, schema, export
+
+title(string), desc(str), img(str), price(num), location(str), country(str) 
+
+
+INITIALISE DATABASE -> 
+
+made data.js and init/index.js
+
+send data of data.js inside DATABASE (run backened/init  node index.js)
+
+
+INDEX ROUTE -
+GET /listings - all listings
+GET /listings/:id/ = in this we can view listing data of specific listing
+
+
+Read : Show route 
+
+
+GET : /listings/new  -> opens a form for new listings on submitting it opens below route
+POST: /listings -> new route posted 
+
+UPDATE ->
+
+GET: /listings/:id/edit
+
+PUT: /listings/:id
