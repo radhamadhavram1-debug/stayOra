@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
+<% layout('/layouts/boilerplate') -%>
 <body>
     <h3><%= listingData.title %> </h3>
     <ul>
@@ -28,11 +20,10 @@
         </li>
     </ul>
 
-    <a href="/listings/<%= listingData._id %>/edit">edit this</a>
+    <!-- <a href="/listings/<%= listingData._id %>/edit">edit this</a> -->
     <br><br>
     <form method="POST" action="/listings/<%= listingData._id %>?_method=DELETE">
         <button type="submit">Delete </button>
     </form>
 </body>
 
-</html>

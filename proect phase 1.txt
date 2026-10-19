@@ -35,3 +35,7 @@ PUT: /listings/:id
 
 DELETE -> 
 DELETE : /listings/:id
+
+
+CREATING NAVBAR ->
+using boilerplate.ejs ( for templating purposes) and bootstrap for navbar 
