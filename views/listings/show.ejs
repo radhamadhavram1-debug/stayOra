@@ -8,7 +8,7 @@
         </li>
         <li>
             <b>Price: &#8377;</b>
-            <%= listingData.price.toLocaleString("en-IN") %>
+           <%= listingData.price.toLocaleString("en-IN") %> 
         </li>
         <li>
             <b> Location: </b>
@@ -20,7 +20,7 @@
         </li>
     </ul>
 
-    <!-- <a href="/listings/<%= listingData._id %>/edit">edit this</a> -->
+    <a href="/listings/<%= listingData._id %>/edit">edit this</a>
     <br><br>
     <form method="POST" action="/listings/<%= listingData._id %>?_method=DELETE">
         <button type="submit">Delete </button>
