@@ -1,29 +1,40 @@
 <% layout('/layouts/boilerplate') -%>
+
 <body>
-    <h3><%= listingData.title %> </h3>
-    <ul>
-        <li>
-           <b>Description: </b> 
-            <%= listingData.description %>
-        </li>
-        <li>
-            <b>Price: &#8377;</b>
-           <%= listingData.price.toLocaleString("en-IN") %> 
-        </li>
-        <li>
-            <b> Location: </b>
-            <%= listingData.location %>
-        </li>
-        <li>
-            <b>Country: </b>
-            <%= listingData.country %>
-        </li>
-    </ul>
+    <br/><br />
+    <div class="card row offset-2" style="width: 60%;">
+        
+        <img src="<%= listingData.image.url %>" class="card-img-top" alt="An img is here">
+        <div class="card-body">
+           
+                <b>
+                    Listing Details
+                </b>
+          
 
-    <a href="/listings/<%= listingData._id %>/edit">edit this</a>
-    <br><br>
-    <form method="POST" action="/listings/<%= listingData._id %>?_method=DELETE">
-        <button type="submit">Delete </button>
-    </form>
+            <h2 class="card-text">
+                <%= listingData.title %>
+            </h2>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <%= listingData.description %>
+            </li>
+            <li class="list-group-item" <%=listingData.price.toLocaleString("en-IN") %></li>
+            <li class="list-group-item">
+                <%= listingData.location %>
+            </li>
+            <li class="list-group-item">
+                <%= listingData.country %>
+            </li>
+        </ul>
+        <div class="card-body flex-row gap-4">
+            <button class="btn btn-outline theme-success"><a href="/listings/<%= listingData._id %>/edit">edit
+                    this</a></button>
+            <form method="POST" action="/listings/<%= listingData._id %>?_method=DELETE">
+                <button class="btn btn-outline theme-success" type="submit">Delete </button>
+            </form>
+        </div>
+    </div>
+    <br/><br />
 </body>
-
