@@ -1,3 +1,4 @@
+
 .navbar{
     height: 5rem; 
 }
@@ -38,12 +39,210 @@
     align-items: space-evenely;
 }
 
-.cardContainer{
-    margin-top: 3rem;
-    margin-bottom: 3rem; 
+/* Main listing section */
+.cardContainer {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 24px;
 }
 
-.cardHeading{
-   margin-top: 2 rem; 
+/* Page heading */
+.cardHeading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 24px;
+}
 
+/* Responsive card grid */
+.listingGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Individual card */
+.listingCard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.listingCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+}
+
+/* Listing image */
+.listingImage {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    background: #f1f5f9;
+}
+
+/* Card content */
+.listingContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+}
+
+.listingTitle {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #111827;
+    margin: 0 0 12px;
+}
+
+/* Price */
+.listingPrice {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 16px;
+}
+
+/* Visit button */
+.visitButton {
+    margin-top: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.visitButton:hover {
+    background: #1d4ed8;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* Fix listing page width */
+.listing-container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* Fix heading */
+.cardHeading {
+    display: block;
+    width: 100%;
+    margin: 0 0 28px;
+    padding: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+}
+
+/* Force actual grid layout */
+.listingGrid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Cards */
+.listingCard {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Images */
+.listingCard img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Card content */
+.listingCard .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px;
+}
+
+/* Titles */
+.listingCard h3,
+.listingCard .card-title {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Price */
+.listingCard .price {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+/* Button */
+.listingCard .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+    .listingGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .listingGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .listingGrid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+.card {
+    width: 300px;
 }
